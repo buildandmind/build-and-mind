@@ -1,0 +1,34 @@
+Tu es consultant en sécurité réseau. Voici l'architecture d'un cabinet comptable
+fictif de 60 personnes, sur deux sites. Trouve les points faibles.
+
+                        Internet (un seul opérateur)
+                                  |
+                          [ Pare-feu UTM ]  <- administration accessible depuis le WAN
+                                  |
+        +-------------------------+--------------------------+
+        |                         |                          |
+   VLAN 1 unique             Wi-Fi invités              NAT 3389 -> PC bureau
+   (tout le monde)          (même sous-réseau)          (télétravail)
+        |
+        +-- 45 postes Windows + 8 portables
+        +-- Contrôleur de domaine (aussi serveur de fichiers)
+        +-- NAS : partages métier ET sauvegardes, SMBv1 activé
+        +-- Imprimantes, caméras IP, pointeuse (mots de passe d'usine)
+        +-- Site distant relié par VPN site-à-site, secret partagé unique
+
+Exploitation :
+- un compte administrateur du domaine sert aux tâches quotidiennes, sans double
+  authentification ;
+- les journaux restent 7 jours, uniquement sur les machines qui les produisent ;
+- les sauvegardes tournent la nuit vers le NAS, restauration jamais testée ;
+- les mises à jour Windows sont laissées en automatique, les serveurs sont
+  redémarrés « quand c'est calme ».
+
+Réponds en six points courts maximum :
+1. classe les faiblesses de la plus grave à la moins grave, avec le risque concret
+   associé à chacune ;
+2. identifie ce qui permettrait à une rançongiciel parti d'un poste de détruire
+   aussi les sauvegardes ;
+3. propose trois corrections applicables en une semaine, sans budget matériel ;
+4. termine par la question que tu poserais au dirigeant avant de toucher quoi que
+   ce soit.
