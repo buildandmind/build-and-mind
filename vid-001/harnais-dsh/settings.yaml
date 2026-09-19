@@ -1,0 +1,19 @@
+# DeepSeek Harness — un seul fournisseur : le serveur llama.cpp local.
+#
+# Les deux réglages « compat » sont nécessaires avec llama.cpp :
+#   supportsDeveloperRole : llama.cpp ne connaît pas le rôle « developer »
+#   maxTokensField        : llama.cpp attend « max_tokens »
+#
+# apiKeyEnv : nom d'une variable d'environnement, n'importe quelle valeur suffit,
+# llama.cpp ne vérifie pas de clé.
+llm-pi-ai:
+  providers:
+    modele-local:
+      apiKeyEnv: GATEWAY_API_KEY
+      api: openai-completions
+      baseURL: http://127.0.0.1:8090/v1
+      compat:
+        supportsDeveloperRole: false
+        maxTokensField: max_tokens
+      models:
+        - id: hy3

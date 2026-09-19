@@ -1,0 +1,7 @@
+A developer wants to run a local AI assistant to analyze confidential source code and technical logs on their PC.
+
+Explain how memory is divided between model weights and context. Then describe what happens when some model layers must run on the CPU because there is not enough VRAM, and why text generation can slow down.
+
+Finish with practical advice for choosing between a smaller model running entirely on the GPU and a larger model partially offloaded to the CPU.
+
+Write in English, using three compact paragraphs and 160–180 words in total. No title, bullet points, tables, or code blocks. Do not invent throughput figures.
