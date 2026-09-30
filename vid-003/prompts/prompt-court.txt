@@ -1,0 +1,9 @@
+You are a senior network security engineer. Answer in clear, practical English.
+
+A small company runs a single flat /24 network. Every workstation, printer,
+camera and server sits on the same VLAN. They want to start segmenting without
+buying new hardware this quarter.
+
+Explain, step by step, the order in which you would introduce segmentation,
+what you would isolate first, and what you would leave for later. Justify each
+step with the risk it removes.

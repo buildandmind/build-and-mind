@@ -1,0 +1,9 @@
+palier,machine_os,backend,gpu,vram_go,date,modele,quantification,contexte_tokens,prompt,entree_tokens,budget_sortie_tokens,generation_tok_s_mediane,prefill_tok_s_mediane,premier_token_s_un_passage_streame_separe,passages_valides
+T1,Windows 11 build 26200,CUDA 13.3.33 / pilote 596.36,RTX 5070 Ti,16,2026-09-10,Qwen3-14B,Q4_K_M,8192,P1 court,97,256,74.012027,2418.771663,0.062346,3
+T1,Windows 11 build 26200,CUDA 13.3.33 / pilote 596.36,RTX 5070 Ti,16,2026-09-10,Qwen3-14B,Q4_K_M,8192,P2 long,6609,64,64.954882,3021.128702,2.203157,3
+T2,Ubuntu Linux 7.0.0-31-generic,HIP / ROCm 7.1,RX 9070 XT,16,2026-09-07,Qwen3-14B,Q4_K_M,8192,P1 court,97,256,52.821387,1374.658107,0.071438,3
+T2,Ubuntu Linux 7.0.0-31-generic,HIP / ROCm 7.1,RX 9070 XT,16,2026-09-07,Qwen3-14B,Q4_K_M,8192,P2 long,6609,64,46.406960,1901.109513,3.491036,3
+T3,Ubuntu Linux 7.0.0-31-generic,HIP / ROCm 7.1,R9700,32,2026-09-07,Qwen3-14B,Q4_K_M,8192,P1 court,97,256,51.939725,1340.075155,0.073959,3
+T3,Ubuntu Linux 7.0.0-31-generic,HIP / ROCm 7.1,R9700,32,2026-09-07,Qwen3-14B,Q4_K_M,8192,P2 long,6609,64,45.035031,1835.804776,3.636216,3
+T4,Ubuntu Linux 7.0.0-31-generic,HIP / ROCm 7.1,3 x R9700 + 1 x RX 9070 XT,112,2026-09-07,Qwen3-14B,Q4_K_M,8192,P1 court,97,256,45.517930,1072.617297,0.091347,3
+T4,Ubuntu Linux 7.0.0-31-generic,HIP / ROCm 7.1,3 x R9700 + 1 x RX 9070 XT,112,2026-09-07,Qwen3-14B,Q4_K_M,8192,P2 long,6609,64,39.804063,3986.861274,1.671839,3

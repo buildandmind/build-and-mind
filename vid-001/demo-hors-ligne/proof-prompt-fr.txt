@@ -1,0 +1,14 @@
+Tu dois évaluer une architecture d’assistant RAG local qui traite des documents clients sensibles.
+
+Contraintes :
+- quatre GPU AMD discrets, 112 Go de VRAM cumulée ;
+- 192 Go de RAM système ;
+- aucun accès Internet pendant l’inférence ;
+- les documents ingérés peuvent contenir des instructions malveillantes ;
+- un humain doit valider toute action sur l’infrastructure.
+
+Réponds en six points courts maximum :
+1. propose les composants principaux ;
+2. sépare clairement confidentialité, intégrité et disponibilité ;
+3. identifie trois modes de défaillance concrets ;
+4. termine par un test qui bloquerait la mise en production.

@@ -1,0 +1,33 @@
+You are a network security consultant. Below is the architecture of a fictional
+60-person accounting firm across two sites. Find the weak points.
+
+                        Internet (single ISP)
+                                  |
+                          [ UTM firewall ]  <- management reachable from the WAN
+                                  |
+        +-------------------------+--------------------------+
+        |                         |                          |
+   Single VLAN 1              Guest Wi-Fi              NAT 3389 -> desktop PC
+   (everyone)                (same subnet)             (remote work)
+        |
+        +-- 45 Windows desktops + 8 laptops
+        +-- Domain controller (also the file server)
+        +-- NAS: business shares AND backups, SMBv1 enabled
+        +-- Printers, IP cameras, time clock (factory default passwords)
+        +-- Remote site over site-to-site VPN, single shared secret
+
+Operations:
+- one domain administrator account is used for daily work, with no second
+  factor;
+- logs are kept 7 days, only on the machines that produce them;
+- backups run nightly to the NAS, restore has never been tested;
+- Windows updates are left on automatic, servers are rebooted "when it's quiet".
+
+Answer in six short points maximum:
+1. rank the weaknesses from most to least severe, with the concrete risk tied to
+   each one;
+2. identify what would let ransomware starting from one desktop also destroy the
+   backups;
+3. propose three fixes that can be applied within a week, with no hardware
+   budget;
+4. finish with the question you would ask the owner before touching anything.

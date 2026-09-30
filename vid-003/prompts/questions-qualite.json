@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Q1-reseau",
+    "prompt": "Explain the difference between TCP and UDP in three sentences."
+  },
+  {
+    "id": "Q2-code",
+    "prompt": "Write a short Python function that returns the nth Fibonacci number using memoization."
+  },
+  {
+    "id": "Q3-securite",
+    "prompt": "What are three practical steps a small business can take to improve Wi-Fi security? Answer as a short bulleted list."
+  },
+  {
+    "id": "Q4-raisonnement",
+    "prompt": "A train leaves station A at 60 km/h. Two hours later, a second train leaves the same station on the same track at 90 km/h. How long until the second train catches the first? Show your reasoning."
+  },
+  {
+    "id": "Q5-traduction",
+    "prompt": "Translate this sentence into French: 'The server will restart automatically after the update is applied.'"
+  }
+]
